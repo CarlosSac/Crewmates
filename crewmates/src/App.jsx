@@ -3,16 +3,23 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
 import "./App.css";
 import CreateCrewmate from "./components/create";
+import CrewmateGallery from "./components/crewmateGallery";
+import EditCrewmate from "./components/editCrewmate";
+import CrewmateDetail from "./components/crewmateDetail";
+import walk from "./assets/walking.webp";
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
-
-const Home = () => <div>Home Page</div>;
-const CrewmateGallery = () => <div>Crewmate Gallery Page</div>;
+const Home = () => (
+    <div>
+        <h1>Welcome to Crewmate Creator!</h1>
+        <h2>
+            Here is where you can create your very own set of crewmates before
+            sending them off into space!
+        </h2>
+        <img src={walk} alt='Among Us Crewmates' />
+    </div>
+);
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <Router>
             <Navbar />
@@ -27,6 +34,12 @@ function App() {
                         path='/crewmate-gallery'
                         element={<CrewmateGallery />}
                     />
+                    <Route path='/edit/:id' element={<EditCrewmate />} />
+                    <Route
+                        path='/crewmate/:id'
+                        element={<CrewmateDetail />}
+                    />{" "}
+                    {/* Add the new route */}
                 </Routes>
             </div>
         </Router>

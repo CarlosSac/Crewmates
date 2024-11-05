@@ -1,5 +1,20 @@
 import React, { useState } from "react";
 import { supabase } from "../client/client";
+import colors from "../assets/colors.webp";
+
+const colorOptions = {
+    red: "Red",
+    blue: "Blue",
+    green: "Green",
+    brown: "Brown",
+    orange: "Orange",
+    yellow: "Yellow",
+    cyan: "Cyan",
+    lime: "Lime",
+    pink: "Pink",
+    purple: "Purple",
+    white: "White",
+};
 
 const CreateCrewmate = () => {
     const [name, setName] = useState("");
@@ -22,8 +37,9 @@ const CreateCrewmate = () => {
     };
 
     return (
-        <div>
-            <h2>Create a Crewmate</h2>
+        <div className='create-crewmate-card'>
+            <h1>Create a Crewmate</h1>
+            <img src={colors} alt='Among Us Crewmate Colors' />
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Name:</label>
@@ -45,14 +61,20 @@ const CreateCrewmate = () => {
                 </div>
                 <div>
                     <label>Color:</label>
-                    <input
-                        type='text'
+                    <select
                         value={color}
                         onChange={(e) => setColor(e.target.value)}
                         required
-                    />
+                    >
+                        <option value=''>Select a color</option>
+                        {Object.entries(colorOptions).map(([key, value]) => (
+                            <option key={key} value={key}>
+                                {value}
+                            </option>
+                        ))}
+                    </select>
                 </div>
-                <button type='submit'>Create Crewmate</button>
+                <button type='submit'>Create</button>
             </form>
         </div>
     );

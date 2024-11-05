@@ -45,3 +45,142 @@
     margin-left: 200px; /* Same width as the sidebar */
     padding: 20px;
 }
+
+.crewmate-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.crewmate-card {
+    flex: 1 1 calc(50% - 16px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.crewmate-card h2 {
+    margin-top: 0;
+}
+
+.crewmate-card p {
+    margin: 4px 0;
+}
+
+.crewmate-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.create-crewmate-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Ensure the card takes up the full width of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.create-crewmate-card img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.create-crewmate-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%; /* Ensure the form takes up the full width of the card */
+}
+
+.create-crewmate-card label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left; /* Align labels to the left */
+    width: 100%; /* Ensure labels take up the full width of the card */
+}
+
+.create-crewmate-card input,
+.create-crewmate-card select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Ensure inputs and select take up the full width of the card */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.create-crewmate-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%; /* Ensure the button takes up the full width of the card */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.create-crewmate-card button:hover {
+    background-color: #0056b3;
+}
+
+.edit-crewmate-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Ensure the card takes up the full width of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.edit-crewmate-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%; /* Ensure the form takes up the full width of the card */
+}
+
+.edit-crewmate-card label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left; /* Align labels to the left */
+    width: 100%; /* Ensure labels take up the full width of the card */
+}
+
+.edit-crewmate-card input,
+.edit-crewmate-card select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Ensure inputs and select take up the full width of the card */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.edit-crewmate-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%; /* Ensure the button takes up the full width of the card */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.edit-crewmate-card button:hover {
+    background-color: #0056b3;
+}
