@@ -83,7 +83,7 @@ const CrewmateGallery = () => {
                             style={{ cursor: "pointer" }}
                         />
                         <h2>{crewmate.name}</h2>
-                        <p>Speed: {crewmate.speed}</p>
+                        <p>Speed: {crewmate.speed} mph</p>
                         <p>Color: {crewmate.color}</p>
                         <button onClick={() => handleEdit(crewmate.id)}>
                             Edit
