@@ -39,7 +39,7 @@ function App() {
                         path='/crewmate/:id'
                         element={<CrewmateDetail />}
                     />{" "}
-                    {/* Add the new route */}
+                    {}
                 </Routes>
             </div>
         </Router>
